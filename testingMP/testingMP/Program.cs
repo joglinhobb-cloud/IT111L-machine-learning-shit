@@ -13,25 +13,69 @@ namespace Project_Shelfy_Automotives
     {
 
 
+        //penis ballsack
+        static string GetUserName()
+        {
+            while (true)
+            {
+                Console.Write("Enter usename: ");
+                string name1 = Console.ReadLine();
+                if (!name1.All(n => char.IsLetter(n)))
+                {
+                    Console.WriteLine("Error! must contain string.");
+                    Console.ReadKey();
+                    continue;
+                }
+                else if (name1.Length < 1)
 
-        static string GetUserName()
-        {
+                {
+                    Console.WriteLine("Error! Length.");
+                    Console.ReadKey();
+                }
+
+                Console.Write("Enter password: ");
+
+                string password1 = Console.ReadLine();
+                if (password1.Length < 1)  //password.Length != 10
+                {
+                    Console.WriteLine("Error! Length.");
+                    Console.ReadKey();
+                    continue;
+                }
+                else if (!password1.All(n => char.IsLetter(n)))
+                {
+                    Console.WriteLine("Error must be number! ");
+                    Console.ReadKey();
+                    continue;
+                }
+            }
             return null;
         }
-        static string GetUserName()
+        static string GetUserPassword()
         {
+            while (true)
+            {
+
+            }
             return null;
         }
-        static string GetUserName()
+        static string GetUserType()
         {
+            while (true)
+            {
+
+            }
             return null;
         }
-        static string GetUserName()
+        static string EmployeeNumberM()
         {
+           
+           
             return null;
         }
-        static string GetUserName()
+        static string EmployeeNumberS()
         {
+            
             return null;
         }
 
