@@ -1,7 +1,0 @@
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\bin\Debug\Prototype_Shelfy.exe.config
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\bin\Debug\Prototype_Shelfy.exe
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\bin\Debug\Prototype_Shelfy.pdb
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\obj\Debug\Prototype_Shelfy.csproj.AssemblyReference.cache
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\obj\Debug\Prototype_Shelfy.csproj.CoreCompileInputs.cache
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\obj\Debug\Prototype_Shelfy.exe
-D:\C# File\Prototype_Shelfy\Prototype_Shelfy\obj\Debug\Prototype_Shelfy.pdb
