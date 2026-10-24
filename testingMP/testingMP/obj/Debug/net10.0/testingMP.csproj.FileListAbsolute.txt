@@ -1,0 +1,15 @@
+C:\Users\ispx\source\repos\testingMP\testingMP\bin\Debug\net10.0\testingMP.exe
+C:\Users\ispx\source\repos\testingMP\testingMP\bin\Debug\net10.0\testingMP.deps.json
+C:\Users\ispx\source\repos\testingMP\testingMP\bin\Debug\net10.0\testingMP.runtimeconfig.json
+C:\Users\ispx\source\repos\testingMP\testingMP\bin\Debug\net10.0\testingMP.dll
+C:\Users\ispx\source\repos\testingMP\testingMP\bin\Debug\net10.0\testingMP.pdb
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.AssemblyInfoInputs.cache
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.AssemblyInfo.cs
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.csproj.CoreCompileInputs.cache
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.dll
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\refint\testingMP.dll
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.pdb
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.genruntimeconfig.cache
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\ref\testingMP.dll
+C:\Users\ispx\source\repos\testingMP\testingMP\obj\Debug\net10.0\testingMP.csproj.Up2Date
