@@ -9,74 +9,231 @@ using System.Threading.Tasks;
 namespace Project_Shelfy_Automotives
 {
 
+    public enum AccountType
+    {
+        Manager,
+        Staff,
+    };
+
+    public enum AccountStatus
+    {
+        Activated,
+        Deactivated,
+            
+    }
+    class StaffManagement()
+    {
+        private List<Employee> listOfEmployees = new List<Employee>(); //created once and saved in here to avoid tamperment
+
+
+        //methods: check if employee list is empty, add new employee
+        //
+    };
+    class Employee
+    {
+        //attributes ---------------------------------------------------
+        string EmployeeNo;
+        string FullName;
+        string Username;
+        private string Password;
+        AccountStatus AccountStatus;
+
+        public Employee(string EmployeeNo, string FullName, string Username, string Password) //For Create New Account.
+        {
+            this.EmployeeNo = EmployeeNo;
+            this.FullName = FullName;
+            this.Username = Username;
+            this.Password = Password;
+            this.AccountStatus = AccountStatus.Activated; //New Accounts start Active.
+        }
+
+        //list of methods. ---------------------------------------------------
+        bool CheckPassword(string attempedPassword)
+        {
+            return false;
+        }
+        bool ChangePassword(string newPassword)
+        {
+            return false;
+        }
+        void Deactivate() //List<Employee> employees, string targetEmpNo
+        {
+            AccountStatus = AccountStatus.Deactivated;
+        }
+        static bool IsActive()
+        {
+            return false;
+        }
+        public virtual string GetUserType()
+        {
+            return "a";
+        }
+        public virtual void ShowMenu()
+        {
+
+        }
+    };
+
+    class Manager: Employee //Manager inherits the Attributes and public methods of Employee (probably the privated method ones as well)
+    {
+        static bool CreateAccount(List<Employee> employees,string empNo, string fullName, string username, string password, string userType) //reject empty name, empty password, duplicates, user type that is not manager or staff.
+        {
+            return false;
+        }
+        static bool ChangeUserType()  
+        {
+            return false;
+        }
+        static void ListEmployees() //Show List of Employees
+        {
+
+        }
+        static void ChangeAccountStatus() //Activate/Deactivate Specified Account
+        {
+
+        }
+        static void ChangePassword()
+        {
+
+        }
+
+        static AccountStatus Deactivate() //List<Employee> employees, string targetEmpNo 
+        {
+            return AccountStatus.Deactivated;
+        }
+        static AccountStatus Activate()
+        {
+            return AccountStatus.Activated;
+
+        }
+        public Manager(string EmployeeNo, string FullName, string Username, string Password) : base (EmployeeNo, FullName, Username, Password) 
+        {
+
+        }
+        
+    };
+    class Staff:Employee
+    {
+        static void ChangePassword()
+        {
+
+        }
+        public Staff(string EmployeeNo, string FullName, string Username, string Password) : base(EmployeeNo, FullName, Username, Password)
+        {
+
+        }
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    //put it inside json insstead of txt
+    //  
     internal class testing
     {
 
 
-        //penis ballsack
-        static string GetUserName()
+        //penis ballsack  
+        static string GetUserName() //polymorph
         {
             while (true)
             {
+                Console.Clear();
                 Console.Write("Enter usename: ");
                 string name1 = Console.ReadLine();
                 if (!name1.All(n => char.IsLetter(n)))
                 {
+                    Console.Clear();
                     Console.WriteLine("Error! must contain string.");
-                    Console.ReadKey();
+                    Thread.Sleep(400);
                     continue;
                 }
                 else if (name1.Length < 1)
 
                 {
-                    Console.WriteLine("Error! Length.");
-                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("Error! Invalid Length..");
+                    Thread.Sleep(400);
                 }
+                return name1;
 
-                Console.Write("Enter password: ");
-
-                string password1 = Console.ReadLine();
-                if (password1.Length < 1)  //password.Length != 10
-                {
-                    Console.WriteLine("Error! Length.");
-                    Console.ReadKey();
-                    continue;
-                }
-                else if (!password1.All(n => char.IsLetter(n)))
-                {
-                    Console.WriteLine("Error must be number! ");
-                    Console.ReadKey();
-                    continue;
-                }
             }
-            return null;
         }
         static string GetUserPassword()
         {
             while (true)
             {
-
+                Console.Clear();
+                Console.Write("Enter password: ");
+                string password1 = Console.ReadLine();
+                if (password1.Length != 10)  
+                {
+                    Console.Clear();
+                    Console.WriteLine("Error! must be 10 digits.");
+                    Thread.Sleep(400);
+                    continue;
+                }
+                else if (!password1.All(n => char.IsDigit(n)))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Error! must be a digit!.");
+                    Thread.Sleep(400);
+                    continue;
+                }
+                return password1;
             }
-            return null;
+         
         }
-        static string GetUserType()
-        {
-            while (true)
-            {
-
-            }
-            return null;
-        }
-        static string EmployeeNumberM()
-        {
-           
-           
-            return null;
-        }
-        static string EmployeeNumberS()
+        static bool GetUserType()
         {
             
-            return null;
+            while (true)
+            {
+                Console.Write("Manager/Staff?: ");  
+
+                string Usertype = Console.ReadLine();
+
+                if (Usertype.Length < 1)  //password.Length != 10
+                {   
+                    Console.WriteLine("Error! Length.");
+                    Console.ReadKey();
+                    continue;
+                }
+                else if (!Usertype.All(n => char.IsLetter(n)))
+                {
+                    Console.WriteLine("Error must be number! ");
+                    Console.ReadKey();
+                    continue;
+                }
+                if (Usertype == "manager" || Usertype == "staff")
+                {
+
+                }
+            }
+            
+
+        }
+        static bool CheckUserName()
+        {
+            return false;
+        }
+
+        static bool CheckUserPassword()
+        {
+            return false;
         }
 
         //------------------------------------------------------------------------------------
@@ -328,8 +485,10 @@ namespace Project_Shelfy_Automotives
         }
 
 
-        static void Main(string[] args)
+
+        static void Main(string[] args) 
         {
+            
             string[] type = new string[1];
             while (true)
             {
@@ -343,64 +502,18 @@ namespace Project_Shelfy_Automotives
                     switch (choice)
                     {
                         case 1: //---------------------------- Login
-                            Console.Write("Enter usename: ");
-                            string name1 = Console.ReadLine();
-                            if (!name1.All(n => char.IsLetter(n)))
-                            {
-                                Console.WriteLine("Error! must contain string.");
-                                Console.ReadKey();
-                                continue;
-                            }
-                            else if (name1.Length < 1)
-
-                            {
-                                Console.WriteLine("Error! Length.");
-                                Console.ReadKey();
-                            }
-
-                            Console.Write("Enter password: ");
-
-                            string password1 = Console.ReadLine();
-                            if (password1.Length < 1)  //password.Length != 10
-                            {
-                                Console.WriteLine("Error! Length.");
-                                Console.ReadKey();
-                                continue;
-                            }
-                            else if (!password1.All(n => char.IsLetter(n)))
-                            {
-                                Console.WriteLine("Error must be number! ");
-                                Console.ReadKey();
-                                continue;
-                            }
-                            if (type[0] == "MANAGER")
-                            {
-                                Manager();
-                            }
-                            else if (type[0] == "STAFF")
-                            {
-                                Staff();
-                            }
+                            
+                            
                             type[0] = null;
                             break;
 
                         case 2: //---------------------------- Sign up
-                            Console.Write("Enter Employee Number: ");
-                            int eNum = Int32.Parse(Console.ReadLine());
+                            string Savedusername = GetUserName();
 
-                            Console.Write("Enter Employee Name: ");
-                            string eName = Console.ReadLine();
+                            string Savedpassword = GetUserPassword();
 
-                            Console.Write("Enter username: ");
-                            string name2 = Console.ReadLine();
-
-                            Console.Write("Enter password: ");
-                            string password2 = Console.ReadLine();
-
-                            Console.Write("Enter type of user (Manager / Staff): ");
-                            type[0] = Console.ReadLine().ToUpper();
-                            Console.WriteLine("Sign-up successful!");
-                            Console.ReadKey();
+                            
+                            
                             break;
                         case 3:
                             Environment.Exit(0);
